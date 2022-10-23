@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+//    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.3'
+}
+
+test {
+    useJUnitPlatform()
+}
