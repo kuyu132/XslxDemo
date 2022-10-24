@@ -38,7 +38,7 @@ public class ParseUtils {
                     }
                     int firstCellIndex = row.getFirstCellNum();
                     int lastCellIndex = row.getLastCellNum();
-                    String firstName;
+                    String firstName = null;
                     for (int cIndex = firstCellIndex; cIndex < lastCellIndex; cIndex++) {
                         Cell cell = row.getCell(cIndex);
                         BaseBean baseBean = new BaseBean();
@@ -47,7 +47,7 @@ public class ParseUtils {
                             baseBean.setValue(cell.toString());
                             Log.i(cell.toString());
                             if (cIndex == firstCellIndex) {
-                                firstName = cell.toString()
+                                firstName = cell.toString();
                             }
                             baseBean.setRowName(firstName);
                         }
